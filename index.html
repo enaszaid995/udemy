@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+  />
+  <!-- Link Swiper's CSS -->
+  <link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper/swiper-bundle.min.css"
+/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+ 
+    <link rel="stylesheet" href="css/style.css">
+    
+    <title>Udemy</title>
+</head>
+<body>
+    <div class="sideNAv d-flex justify-content-between" id="sidenav">
+        <div class="links">
+            <a>home</a>
+            <a>log in</a>
+            <a>signup</a>
+        </div>
+        <div class="cancel" id="cancel" onclick="hideSide()">
+            <i class="far fa-window-close"></i>
+        </div>
+    </div>
+    <header class="brightness">
+        <div class="container-fluid justify-content-between d-flex ">
+            <div class="leftNav  d-flex">
+
+                <div class=" dropdown listitemnav " id="trash">
+                    <a  role="button" type="button" class="btn catt srcn tablink "   onclick="showSide()" data-toggle="dropdown" href="#">
+                        <i class="fas fa-bars"></i>
+                      
+                    </a>
+                </div>
+
+
+
+                <a class="navbar-brand me-2 mb-1 d-flex align-items-center imgna" href="#">
+                    <img
+                      src="images/logo-udemy.svg"
+                      height="35"
+                      alt=""
+                    
+                      style="margin-top: 2px;"
+                    />
+                  </a>
+
+                  <div class=" dropdown">
+                    <a  role="button" type="button" class="btn catt scrr" data-toggle="dropdown" href="#">
+                      Categories
+                      
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+            
+                  </div>
+            </div>
+
+            <div class="centerNav justify-content-between d-flex align-items-center dropdown">
+                
+              
+                    <form class="example scrr brightness" action="/action_page.php" >
+
+                         <input type="text" id="myInput" onkeyup="mySearch()" placeholder="Search for anything" title="Type in a name">
+                    </form>
+                    <div class="dropdown-menu menusearch"  id="menusearch" aria-labelledby="navbarDropdownMenuLink">
+
+                        <ul id="myUL">
+                            <li><a href="#">Adele</a></li>
+                            <li><a href="#">Agnes</a></li>
+    
+                            <li><a href="#">Billy</a></li>
+                            <li><a href="#">Bob</a></li>
+    
+                            <li><a href="#">Calvin</a></li>
+                            <li><a href="#">Christina</a></li>
+                            <li><a href="#">Cindy</a></li>
+                            </ul>
+                    </div>
+                
+            </div>
+
+            <div class="rightNav d-flex">
+                <div class=" dropdown">
+                    <a  role="button" type="button" class="cat udemyBus" data-toggle="dropdown" href="#">
+                        Udemy Business
+                        
+                      </a>
+                      <div class="dropdown-menu techDesc" aria-labelledby="navbarDropdownMenuLink">
+                        <h5>
+                            Get your team access to over 6,000 top Udemy courses, anytime, anywhere.
+
+                        </h5>
+                        <a  role="button" type="button" class="btn btn-dark " data-toggle="dropdown" href="#">
+                            Try Udemy Business
+                          </a>
+                      </div>
+                  </div>
+
+
+                  <div class="dropdown">
+                    <a  role="button" type="button" class="cat udemyteach" data-toggle="dropdown" href="#">
+                      Teach on Udemy
+                      
+                    </a>
+                    <div class="dropdown-menu techDesc" aria-labelledby="navbarDropdownMenuLink">
+                        <h5>
+                            Turn what you know into an opportunity and reach millions around the world.
+
+                        </h5>
+                        <a  role="button" type="button" class="btn btn-dark " data-toggle="dropdown" href="#">
+                            Learn more
+                          </a>
+                      </div>
+                  </div>
+
+                  <div class="dropdown">
+                    <a  role="button" type="button" class="catt srcn" data-toggle="dropdown" href="#">
+                        <i class="fas fa-search"></i>
+                    
+                    </a>
+                    <div class="dropdown-menu cartDesc" aria-labelledby="navbarDropdownMenuLink">
+                        <p class="text-muted">Your cart is empty.</p>
+                        <p>Keep shopping</p>
+                    </div>
+                 </div>
+                  <div class="dropdown">
+                    <a  role="button" type="button" class="catt" data-toggle="dropdown" href="#">
+                        <i class="fas fa-shopping-cart"></i>
+                    
+                    </a>
+                    <div class="dropdown-menu cartDesc" aria-labelledby="navbarDropdownMenuLink">
+                        <p class="text-muted">Your cart is empty.</p>
+                        <p>Keep shopping</p>
+                    </div>
+                </div>
+                
+
+                 
+                <div class="dropdown">
+             
+        
+                     <a  role="button" type="button" class="btn btn-outline-dark scrr" data-toggle="dropdown" href="#">
+                    Login
+                    
+                    </a> 
+                </div> 
+
+                <div class=" dropdown">
+                    <a  role="button" type="button" class="btn btn-dark  scrr" data-toggle="dropdown" href="#">
+                    Sign up
+                    </a>
+                    
+                </div> 
+
+                 <div class="dropdown">
+                    <a  role="button" type="button" class="btn btn-outline-dark linkbtn scrr" data-toggle="dropdown" href="#">
+                        <i class="fas fa-globe"></i>
+                        
+                    </a>
+                    
+                </div> 
+
+
+            </div>
+        </div>
+    </header>
+    <section class="main brightness">
+        <div class="bg-img">
+            <form action="/action_page.php" class="container">
+              <h1>Learning that gets you</h1>
+          
+              <label>
+                  Skills for your present (and your future). Get started with us.
+
+            </label>
+              
+            <form class="" action="/action_page.php" >
+
+                <input type="text" id="myInput2"  placeholder="What do you want to learn?" title="Type in a name">
+           </form>
+            </form>
+          </div>
+    </section>
+
+    <section class="board">
+        <div class="broadHead">
+            <h2>A broad selection of courses</h2>
+             <p>Choose from 155,000 online video courses with new additions published every month</p>
+        </div>
+        <div class="broadBody">
+            <div class="broadlinks">
+                <a href="#" class="active"id="python" >Python</a>
+                <a href="#" onclick="excel()" id="excel">Excel</a>
+                <a href="#" onclick="webDevelopmen()" id="web">Web Development</a>
+                <a href="#" onclick="javaScript()">JavaScript</a>
+                <a href="#" onclick="dataSicence()">Data Sicence</a>
+                <a href="#" onclick="AWS()">AWS Certifecation</a>
+                <a href="#" onclick="drawing()">Drawing</a>
+            </div>
+            <div class="broadCourses">
+                <div class="courseDetails">
+                    <h3 id="detailC1">Expand your career opportunities with Python</h3>
+                    <p id="detailC2">Whether you work in machine learning or finance, or are pursuing a career in web development or data science, Python is one of the most important skills you can learn. Python's simple syntax is especially suited for desktop, web, and business applications. Python's design philosophy emphasizes readability and usability. Python was...</p>
+                    <button>Explore  <span id="detailC3">python</span></button>
+                </div>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper" id="mainswiper" onload="python()">
+                      
+                      
+                    </div>
+                    <div class="swiper-button-next  sbtn"></div>
+                    <div class="swiper-button-prev  sbtn"></div>
+                   
+                  </div>
+              
+                            
+              
+            </div>
+        </div>
+    </section>
+
+
+    <section class="icon">
+        <div class="container-fluid">
+            
+          </div> 
+    </section>
+    
+    <section class="topCategories brightness">
+        <div class="container-fluid">
+            <div class="topCatHeader">
+                <h4>
+                    Top categories
+                </h4>
+            </div>
+            <div class="topCardContainer">
+                <div class="card  ">
+                    <a href="#">
+                        <div class="img-body">
+                            <img src="images/design.jpg" class="card-img-top img-fluid" alt="...">
+                        </div>
+                        
+                        <div class="card-body">
+                            <span class="card-title">Design</span>
+                        </div>
+                    </a>
+                    
+                  </div>
+                  <div class="card ">
+                    <a href="#">
+                        <div class="img-body">
+                            <img src="images/development.jpg" class="card-img-top img-fluid" alt="...">
+                        </div>
+                        
+                        <div class="card-body">
+                            <span class="card-title">Development</span>
+                        </div>
+                    </a>
+                    
+                  </div>
+
+                  <div class="card ">
+                    <a href="#">
+                        <div class="img-body">
+                            <img src="images/marketing.jpg" class="card-img-top img-fluid" alt="...">
+                        </div>
+                        
+                        <div class="card-body">
+                            <span class="card-title">Marketing</span>
+                        </div>
+                    </a>
+                    
+                  </div>
+
+                  <div class="card ">
+                    <a href="#">
+                        <div class="img-body">
+                            <img src="images/it and software.jpg" class="card-img-top img-fluid" alt="...">
+                        </div>
+                        
+                        <div class="card-body">
+                            <span class="card-title">IT and Software</span>
+                        </div>
+                    </a>
+                    
+                  </div>
+
+                  <div class="card ">
+                    <a href="#">
+                        <div class="img-body">
+                            <img src="images/personal development.jpg" class="card-img-top img-fluid" alt="...">
+                        </div>
+                        
+                        <div class="card-body">
+                            <span class="card-title">Personal Development</span>
+                        </div>
+                    </a>
+                    
+                  </div>
+
+                  <div class="card ">
+                    <a href="#">
+                        <div class="img-body">
+                            <img src="images/business.jpg" class="card-img-top img-fluid" alt="...">
+                        </div>
+                        
+                        <div class="card-body">
+                            <span class="card-title">Business</span>
+                        </div>
+                    </a>
+                    
+                  </div>
+
+
+                  <div class="card ">
+                    <a href="#">
+                        <div class="img-body">
+                            <img src="images/photography.jpg" class="card-img-top img-fluid" alt="...">
+                        </div>
+                        
+                        <div class="card-body">
+                            <span class="card-title">Photography</span>
+                        </div>
+                    </a>
+                    
+                  </div>
+
+                  <div class="card ">
+                    <a href="#">
+                        <div class="img-body">
+                            <img src="images/music.jpg" class="card-img-top img-fluid" alt="...">
+                        </div>
+                        
+                        <div class="card-body ">
+                            <span class="card-title">Music</span>
+                        </div>
+                    </a>
+                    
+                  </div>
+            </div>
+
+        </div>
+    </section>
+
+  
+
+    <section class="topics">
+        <div class="container-fluid">
+            <div class="topicHeader">
+                <h4>Featured topics by category</h4>
+            </div>
+            <div class="topicBody">
+            <div class="row">
+               <div class="col-6 col-lg-3 col-md-3 col-sm-3">
+                
+                    <div class="topiItem">
+                        <h5>Development</h5>
+                        <div>
+                            <a href="#">
+                                <span>Python</span>
+                            </a>
+                            <div class="topicstudent">
+                                30,296,741 students
+                            </div>
+                        </div>
+    
+                        <div>
+                            <a href="#">
+                                <span>Web Development</span>
+                            </a>
+                            <div class="topicstudent">
+                                9,759,066 students
+                            </div>
+                        </div>
+    
+                        <div>
+                            <a href="#">
+                                <span>Machine Learning</span>
+                            </a>
+                            <div class="topicstudent">
+                                6,075,309 students
+                            </div>
+                        </div>
+                        
+                    </div>
+    
+    
+               </div>
+
+
+                <div class="col-6 col-lg-3 col-md-3 col-sm-3">
+                
+                <div class="topiItem">
+                    <h5>Business</h5>
+                    <div>
+                        <a href="#">
+                            <span>Financial Analysis</span>
+                        </a>
+                        <div class="topicstudent">
+                            1,099,965 students
+                        </div>
+                    </div>
+
+                    <div>
+                        <a href="#">
+                            <span>SQL</span>
+                        </a>
+                        <div class="topicstudent">
+                            4,529,823 students
+                        </div>
+                    </div>
+
+                    <div>
+                        <a href="#">
+                            <span>PMP</span>
+                        </a>
+                        <div class="topicstudent">
+                            1,411,713 students
+                        </div>
+                    </div>
+                    
+                </div>
+
+
+                </div>
+
+
+                <div class="col-6 col-lg-3 col-md-3 col-sm-3">
+                    
+                <div class="topiItem">
+                    <h5>IT and Software</h5>
+                    <div>
+                        <a href="#">
+                            <span>AWS Certification</span>
+                        </a>
+                        <div class="topicstudent">
+                            4,540,087 students
+                        </div>
+                    </div>
+
+                    <div>
+                        <a href="#">
+                            <span>Ethical Hacking</span>
+                        </a>
+                        <div class="topicstudent">
+                            9,270,833 students
+                        </div>
+                    </div>
+
+                    <div>
+                        <a href="#">
+                            <span>Cyber Security</span>
+                        </a>
+                        <div class="topicstudent">
+                            3,327,784 students
+                        </div>
+                    </div>
+                    
+                </div>
+
+
+                </div>
+
+                <div class="col-6 col-lg-3 col-md-3 col-sm-3">
+                
+        <div class="topiItem">
+            <h5>Design</h5>
+            <div>
+                <a href="#">
+                    <span>Photoshop</span>
+                </a>
+                <div class="topicstudent">
+                    9,854,582 students
+                </div>
+            </div>
+
+            <div>
+                <a href="#">
+                    <span>Graphic Design</span>
+                </a>
+                <div class="topicstudent">
+                    2,889,532 students
+                </div>
+            </div>
+
+            <div>
+                <a href="#">
+                    <span>Drawing</span>
+                </a>
+                <div class="topicstudent">
+                    2,216,478 students
+                </div>
+            </div>
+            
+        </div>
+
+
+                </div>
+
+                <div class="col-6 col-lg-3 col-md-3 col-sm-3">
+                
+    <div class="topiItem lasttopic">
+        <a href="#">
+
+            <span>Explore more topics</span>
+        </a>
+        
+    </div>
+
+
+                </div>
+        </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="instructor">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <img src="images/instructor-1x-v3.jpg" width="400px" height="400px" alt="instructor">
+                </div>
+
+                <div class="col-lg-6 col-md-12 col-sm-12 instructorbody">
+                    <h3>Become an instructor</h3>
+
+                    <p>
+                        Instructors from around the world teach millions of students on Udemy. We provide the tools and skills to teach what you love.
+                    </p>
+                    <a>Start teaching today</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="trustCompany">
+        <div class="companyHeader">
+            <h3>
+                Trusted by companies of all sizes
+            </h3>
+        </div>
+        <div class="companyBody">
+            <a href="#">
+                <img src="images/apple-dark.svg" alt="company">
+            </a>
+
+            <a href="#">
+                <img src="images/box-dark.svg" alt="company">
+            </a>
+
+            <a href="#">
+                <img src="images/volkswagen-dark.svg" alt="company">
+            </a>
+
+            <a href="#">
+                <img src="images/netflix-dark.svg" alt="company">
+            </a>
+
+            <a href="#">
+                <img src="images/eventbrite-dark.svg" alt="company">
+            </a>
+        </div>
+    </section>
+
+    <section class="udemyBusiness instructor">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-sm-12 instructorbody">
+                    <h3>
+                        <img src="images/logo-ub.svg" width="235px;">
+                    </h3>
+
+                    <p>
+                        Get unlimited access to 6,000+ of Udemy’s top courses for your team. Learn and improve skills across business, tech, design, and more.
+                    </p>
+                    <a>Get Udemy Business</a>
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12 businessBody">
+                    <img src="images/ub-1x-v3.jpg" width="400px" height="400px" alt="instructor">
+                </div>
+
+               
+            </div>
+        </div>
+    </section>
+
+    <section class="instructor">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <img src="images/transform-mobile-v3.jpg" width="500px" height="500px" alt="instructor">
+                </div>
+
+                <div class="col-lg-6 col-md-12 col-sm-12 instructorbody">
+                    <h3>Transform your life through education</h3>
+
+                    <p>
+                        Learners around the world are launching new careers, advancing in their fields, and enriching their lives.
+                    </p>
+                    <a>Find out how</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-10  col-md-9 col-sm-12">
+                        <div class="row">
+                            <div class="col-lg-3  col-md-3 col-sm-12">
+                                <a href="#!">Udemy Business</a>
+                                <a href="#!">Teach on Udemy</a>
+                                <a href="#!">Get the app</a>
+                                <a href="#!">About us</a>
+                                <a href="#!">Contact us</a>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-12">
+                                <a href="#!">Careera</a>
+                                <a href="#!">Blog</a>
+                                <a href="#!">Help and Support</a>
+                                <a href="#!">Affiliate</a>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <a href="#!">Terms</a>
+                                <a href="#!">Privacy policy</a>
+                                <a href="#!">Do not sell my personal information</a>
+                                <a href="#!">Sitemap</a>
+                            </div>
+                        </div>
+                </div>
+
+                <div class="col-lg-2 col-md-3 col-sm-12 rightfooter">
+                   <div class="bb">
+                        <button><img src="images/1486395887-globe_80613.png" alt="">English</button>
+                   </div>
+                </div>
+            </div>
+
+            <div class="row lastfooter">
+                <div class="col-lg-10 col-md-10 col-sm-12">
+                    <a href="#"><img src="images/logo-udemy-inverted.svg" width="90px" alt=""></a>
+                </div>
+
+                <div class="col-lg-2 col-md-2 col-sm-12 rightfooter">
+                    <p>© 2021 Udemy, Inc.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/jquery-3.5.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+      <!-- Swiper JS -->
+      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+      <!-- Initialize Swiper -->
+      <script>
+        
+      </script>
+      
+    <script src="js/main.js"></script>
+</body>
+</html>

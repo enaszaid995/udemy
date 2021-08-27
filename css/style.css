@@ -1,0 +1,720 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+
+.sideNAv{
+    margin: 0;
+    padding: 0;
+    width: 30%;
+    position: relative;
+    z-index: 1000;
+    visibility: hidden;
+    
+}
+.sideNAv .links{
+    position: absolute;
+    margin: 0;
+    height: 100vh;
+    background-color: white;
+    padding: 20px 100px 20px 50px ;
+    
+}
+.sideNAv .links a{
+    display: block;
+    padding: 5px;
+}
+.sideNAv .cancel{
+    position: absolute;
+    top: 20px;
+    left: 120px;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin-left: 100px;
+    font-size: 25px;
+}
+ header{
+    padding: 0px 5px;
+    font-size: 12px;
+  margin-top: 0;
+}
+header .leftNav{
+    width: 12%;
+    text-align: left;
+}
+ 
+
+ header .dropdown-menu::before{
+    
+    border: none;
+    content: none;
+}
+
+header .dropdown-menu::after {
+border: none;
+content: none;
+}
+
+header .dropdown .dropdown-menu{
+    padding: 10px;
+}
+header .dropdown .dropdown-menu a{
+    padding-bottom: 5px;
+}
+header .dropdown:hover .dropdown-menu {
+    display: block;
+   
+}
+
+header .dropdown:hover .menusearch  {
+    display: none;
+}
+
+header .centerNav{
+    width: 35%;
+    text-align: center;
+}
+
+
+header .rightNav{
+    width: 45%;
+    text-align: right;
+    padding: 0;
+    margin: 0;
+    margin: right;
+    margin-right: 0;
+}
+
+header .rightNav .btn{
+    margin: 20px 0px 0px 10px;
+    font-size: 12px;
+}
+
+header  .dropdown .catt{
+    font-size: 15px;
+    color: black;
+    padding-top: 25px;
+    margin-right: 10px;
+    margin-left: 15px;
+}
+header .dropdown .catt:hover{
+    color: blueviolet;
+}
+
+header  .dropdown .cat{
+    font-size: 15px;
+    min-width: 135px;
+    margin-left: 0px;
+    padding-top: 25px;
+    color: black;
+    text-decoration:none;
+    
+}
+header .dropdown .cat:hover{
+    color: blueviolet;
+}
+
+header form{
+    width: 100%;
+    margin: auto;
+    margin-top: 15px;
+}
+
+header .listitemnav{
+    margin: 0;
+    padding-right: 0;
+    margin-right: 200;
+    border: none;
+}
+header .listitemnav .btn:focus{
+    box-shadow: none;
+}
+header .listitemnav .dropdown-menu{
+    margin: 0;
+    top: 0;
+}
+#myInput {
+    background-image: url('/images/icons8-search-24.png');
+    background-position: 25px 10px;
+    background-repeat: no-repeat;
+    width: 90%;
+    font-size: 16px;
+     Padding: 12px 60px;
+    border: 1px solid black;
+    border-radius: 25px;   
+    margin-bottom: 12px;
+  }
+
+  #myInput2 {
+    background-image: url('/images/icons8-search-24.png');
+    background-position: 300px 10px;
+    background-repeat: no-repeat;
+    
+    font-size: 16px;
+     Padding: 12px 10px;
+    border: 1px solid black;
+   
+    margin-bottom: 12px;
+  }
+  #myInput:focus{
+    border: 1px solid black;
+      outline: none;
+     
+  }
+  #myUL {
+    list-style-type: none;
+   padding: 5px 10px;
+    display: none;
+  }
+
+  #myUL a{
+      text-decoration: none;
+      min-width: 400px;
+      color: black;
+  }
+
+
+  header .leftNav .srcn{
+      padding-right: 200px;
+     font-size: 20px;
+     padding-bottom: 10px;
+    display: none;
+}
+header .rightNav .srcn{
+    display: none;
+}
+header .rightNav i{
+    font-size: 20px;
+}
+header .cartDesc{
+    width: 250px;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+   font-weight: 600;
+}
+header .techDesc{
+    width: 350px;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+   font-weight: 600;
+}
+header .techDesc a{
+    width: 100%;
+}
+header .cartDesc p{
+    color: blueviolet;
+    
+}
+
+.main{
+    padding: 0px 90px ;
+    box-shadow: 0px -4px 3px rgb(224, 222, 222);
+    
+}
+.main .mainImg{
+    width: 100%;
+   
+}
+.main .mainImg img{
+   
+ 
+    width: 100%;
+}
+
+.main form{
+    border-radius: 0%;
+}
+
+.main .bg-img {
+    /* The image used */
+    background-image: url("/images/92a752b4-2f5b-45c7-a451-d84b32ccb0cf.jpg");
+  
+    min-height: 380px;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  
+  /* Add styles to the form container */
+  .main .container {
+    position: absolute;
+
+    left: 20;
+    margin: 50px;
+    max-width: 400px;
+    padding: 16px;
+    background-color: white;
+  }
+  
+  /* Full-width input fields */
+  .main input[type=text],  .main input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    
+
+    
+  }
+  
+  .main input[type=text]:focus,   .main input[type=password]:focus {
+    
+    outline: none;
+  }
+  
+  /* Set a style for the submit button */
+  .main .btn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+  }
+  
+  .main .btn:hover {
+    opacity: 1;
+  }
+section{
+    padding: 10px 10px 10px 50px;
+}
+.board{
+    margin: 50px;
+}
+.board .broadHead p{
+    font-size: 18px;
+}
+.board .broadBody .broadlinks a{
+    color: gray;
+    font-size: 16px;
+    font-weight: 700;
+    padding-right: 10px;
+    text-decoration: none;
+}
+.board .broadBody .broadlinks a:hover{
+    color: black;
+}
+
+.board .broadBody .broadlinks .active{
+    color: black;
+}
+.board .broadBody .broadCourses{
+    border: 1px solid black;
+    margin: 30px 0px;
+    padding: 20px;
+}
+
+.board .broadBody .broadCourses .courseDetails{
+    padding: 10px 40px;
+}
+.board .broadBody .broadCourses .courseDetails h3{
+    font-weight: 600;
+    padding: 0px;
+}
+.board .broadBody .broadCourses .courseDetails button{
+    font-weight: 600;
+    padding: 5px;
+    background-color: white;
+    font-size: 14px;
+}
+.board .broadBody .broadCourses .broadswiper{
+    position: relative;
+    padding: 30px;
+  
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+  }
+  .swiper-slide  .star{
+      display: flex;
+      
+  }
+  .swiper-slide .checked{
+      color: orange;
+
+  }
+
+  .swiper .sbtn{
+      background-color: black;
+      color: white;
+      font-size: 17px;
+      padding:30px;
+      border-radius: 50%;
+  }
+
+  @media only screen and (min-width: 769px) {
+    .swiper-slide:first-child {
+      transition: transform 100ms;
+    }
+
+    .swiper-slide:first-child img {
+      transition: box-shadow 500ms;
+    }
+
+    .swiper-slide.swiper-slide-active:first-child {
+      transform: translateX(50%);
+      z-index: 2;
+    }
+
+    .swiper-slide.swiper-slide-active:first-child img {
+      box-shadow: 0px 32px 80px rgba(0, 0, 0, 0.35);
+    }
+
+    .swiper-slide:nth-child(2) {
+      transition: transform 100ms;
+    }
+
+    .swiper-slide.swiper-slide-next:nth-child(2) {
+      transform: translateX(55%);
+      z-index: 1;
+    }
+
+    .swiper[dir="rtl"] .swiper-slide.swiper-slide-active:first-child {
+      transform: translateX(-50%);
+    }
+
+    .swiper[dir="rtl"] .swiper-slide.swiper-slide-next:nth-child(2) {
+      transform: translateX(-55%);
+    }
+  }
+  
+.topCategories .topCatHeader h4{
+    font-weight: 700;
+    margin: 20px 40px;
+}
+.topCategories .topCardContainer{
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+}
+.topCategories  .card{
+    max-width: 22%;
+    border: none;
+    margin-left: 20px;
+}
+
+.topCategories  .card a{
+    text-decoration: none;
+    color: black;
+    overflow: hidden;
+    
+}
+.topCategories .card .img-body{
+    overflow: hidden;
+    margin-left: 18px;
+    /* width: 100%; */
+}
+
+.topCategories .card span{
+    font-weight: 700;
+    min-width: 200px;
+}
+
+.topCategories .card img:hover{
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+.topics{
+    background-color: #f7f9fa;
+    text-align: left;
+}
+
+.topics h4{
+    font-weight: 700;
+    margin: 20px 40px;
+}
+
+.topics h5{
+    font-weight: 700;
+    margin: 20px 40px;
+    min-width: 100px;
+}
+.topics .topicBody .topiItem{
+    min-width: 150px;
+}
+.topics .topicBody span{
+    color:#5832b6 ;
+    text-decoration: underline;
+    font-weight: 700;
+    margin: 20px 40px 0px 40px;
+    font-size: 15px;
+    width: 100px;
+}
+.topics .topicBody .topicstudent{
+    margin: 5px 40px 20px 40px;
+    font-size: 14px;
+    color: rgb(148, 147, 147);
+    min-width: 120px;
+}
+.topics .topicBody .lasttopic {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.topics .topicBody .lasttopic a span{
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    border: 1px solid black;
+    padding: 5px;
+    margin: 0px 0px 20px 40px;
+    
+}
+.topics .topicBody .lasttopic a span:hover{
+    background-color:  rgb(236, 234, 234);
+    
+}
+
+.topics .topicBody .lasttopic a:hover{
+    
+    text-decoration: none;
+}
+.instructor{
+    text-align: center;
+    margin: 40px 0px;
+}
+
+.instructor .instructorbody{
+    text-align: left;
+    align-items: center;
+    padding-top: 100px;
+}
+.instructor .instructorbody h3{
+    font-weight: 700;
+    font-size: 2.2rem;
+    line-height: 1.25;
+    letter-spacing: -.05rem;
+}
+
+.instructor .instructorbody p{
+    font-weight: 400;
+    line-height: 1.4;
+    font-size: 19px;
+    max-width: 75%;
+  
+}
+.instructor .instructorbody a{
+    position: relative;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    min-width: 8rem;
+    padding: 10px 30px ;
+    justify-content: center;
+    user-select: none;
+    vertical-align: bottom;
+    white-space: nowrap;
+    background-color: #1c1d1f;
+    color: white;
+    font-weight: 700;
+    margin-top: 10px;
+}
+.instructor .instructorbody a:hover{
+    background-color: black;
+    color: white;
+}
+.trustCompany{
+    background-color: #f7f9fa;
+    text-align: center;
+}
+.trustCompany .companyHeader{
+    margin: 20px 0px;
+}
+.trustCompany .companyBody{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 10px 0px;
+}
+.trustCompany .companyBody a{
+    padding: 10px;
+}
+.udemyBusiness .businessBody{
+    text-align: left;
+}
+
+.udemyBusiness .businessBody img{
+    text-align: left;
+}
+footer{
+    background-color: #1c1d1f;
+    color: white;
+    padding: 20px 40px;
+}
+footer .rightfooter{
+    text-align: right;
+}
+footer .rightfooter button{
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    padding: 5px 40px 5px 10px;
+    margin-bottom: 0;
+}
+
+footer .rightfooter button:hover{
+    opacity: 0.7;
+}
+footer .rightfooter p{
+    font-size: 12px;
+}
+footer .lastfooter{
+    padding: 50px 0px 10px 0px;
+}
+footer a{
+    color: white;
+    display: block;
+    font-size: 14px;
+    padding: 4px;
+    font-weight: 400;
+}
+footer a:hover{
+    color: white;
+}
+@media screen and (max-width: 1100px) {
+    header .centerNav form{
+        margin-left: 50px;
+    }
+    header .rightNav .udemyBus{
+        display: none;
+    }
+    .topics .topicBody span{
+        
+        font-size: 12px;
+        text-align: left;
+        margin: 0px;
+        margin-left: 40px;
+    }
+
+    .topics .topicBody .topicstudent{
+        font-size: 12px
+    }
+
+    .instructor .instructorbody{
+        text-align: center;
+    }
+
+    .instructor .instructorbody p{
+        text-align: center;
+        max-width: 100%;
+    }
+
+    
+    .topics .topicBody .lasttopic a span{
+        font-size: 10px;
+        
+    }
+}
+@media screen and (max-width: 920px){
+    header .rightNav .udemyteach{
+        display: none;
+    }
+    header .techDesc{
+        display: none;
+    }
+} 
+@media screen and (max-width:800px) {
+    header .rightNav {
+        text-align: right;
+        margin: right;
+    }
+    header .scrr{
+        display: none;
+    }
+    header .rightNav{
+        width: 10%;
+    }
+    header .rightNav .srcn{
+        display: block;
+        
+    }
+    header .leftNav .srcn{
+        display: block;}
+
+    
+}
+@media screen and (max-width: 780px) {
+
+    
+    footer .rightfooter{
+        text-align: left;
+        font-size: 14px;
+    }
+    
+}
+@media screen and (max-width: 730px) {
+
+    .topCategories  .card{
+        min-width: 29%;
+        border: none;
+        margin-left: 20px;
+    }
+    
+    footer .rightfooter{
+        text-align: left;
+    }
+}
+@media screen and (max-width: 600px) {
+    .topCategories{
+        margin:0px;
+        margin-left: 5px;
+    }
+    .topCategories .topCatHeader h4{
+        margin: 0px;
+        margin-left: 5px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+    .topCategories .card-body{
+        margin: 0;
+        padding: 0;
+        margin: 15px 5px;
+    }
+    .topCategories .img-body{
+        display: none;
+    }
+
+    .topCategories .card  span{
+        border:1px solid #1c1d1f;
+        border-radius: 45%;
+        padding: 14px 16px ;
+        margin: 2px;
+        font-size: 14px;
+        font-weight: 700;
+        min-width: 150px;
+    } 
+
+    .topCategories  .card{
+        max-width: 100%;
+        min-width: 13%;
+        margin:0px;
+        margin-bottom: 30px;
+    }
+
+    
+  }
+ 
