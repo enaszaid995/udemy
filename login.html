@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+  />
+  <!-- Link Swiper's CSS -->
+  <link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper/swiper-bundle.min.css"
+/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    
+    <title>Udemy</title>
+</head>
+<body>
+    <div class="sideNAv d-flex justify-content-between" id="sidenav">
+        <div class="links">
+            <a>home</a>
+            <a>log in</a>
+            <a>signup</a>
+        </div>
+        <div class="cancel" id="cancel" onclick="hideSide()">
+            <i class="far fa-window-close"></i>
+        </div>
+    </div>
+    <header class="brightness">
+        <div class="container-fluid justify-content-between d-flex ">
+            <div class="leftNav  d-flex">
+
+                <div class=" dropdown listitemnav " id="trash">
+                    <a  role="button" type="button" class="btn catt srcn tablink "   onclick="showSide()" data-toggle="dropdown" href="#">
+                        <i class="fas fa-bars"></i>
+                      
+                    </a>
+                </div>
+
+
+
+                <a class="navbar-brand me-2 mb-1 d-flex align-items-center imgna" href="#">
+                    <img
+                      src="images/logo-udemy.svg"
+                      height="35"
+                      alt=""
+                    
+                      style="margin-top: 2px;"
+                    />
+                  </a>
+
+                  <div class=" dropdown">
+                    <a  role="button" type="button" class="btn catt scrr" data-toggle="dropdown" href="#">
+                      Categories
+                      
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+            
+                  </div>
+            </div>
+
+            <div class="centerNav justify-content-between d-flex align-items-center dropdown">
+                
+              
+                    <form class="example scrr brightness" action="/action_page.php" >
+
+                         <input type="text" id="myInput" onkeyup="mySearch()" placeholder="Search for anything" title="Type in a name">
+                    </form>
+                    <div class="dropdown-menu menusearch"  id="menusearch" aria-labelledby="navbarDropdownMenuLink">
+
+                        <ul id="myUL">
+                            <li><a href="#">Adele</a></li>
+                            <li><a href="#">Agnes</a></li>
+    
+                            <li><a href="#">Billy</a></li>
+                            <li><a href="#">Bob</a></li>
+    
+                            <li><a href="#">Calvin</a></li>
+                            <li><a href="#">Christina</a></li>
+                            <li><a href="#">Cindy</a></li>
+                            </ul>
+                    </div>
+                
+            </div>
+
+            <div class="rightNav d-flex">
+                <div class=" dropdown">
+                    <a  role="button" type="button" class="cat udemyBus" data-toggle="dropdown" href="#">
+                        Udemy Business
+                        
+                      </a>
+                      <div class="dropdown-menu techDesc" aria-labelledby="navbarDropdownMenuLink">
+                        <h5>
+                            Get your team access to over 6,000 top Udemy courses, anytime, anywhere.
+
+                        </h5>
+                        <a  role="button" type="button" class="btn btn-dark " data-toggle="dropdown" href="#">
+                            Try Udemy Business
+                          </a>
+                      </div>
+                  </div>
+
+
+                  <div class="dropdown">
+                    <a  role="button" type="button" class="cat udemyteach" data-toggle="dropdown" href="#">
+                      Teach on Udemy
+                      
+                    </a>
+                    <div class="dropdown-menu techDesc" aria-labelledby="navbarDropdownMenuLink">
+                        <h5>
+                            Turn what you know into an opportunity and reach millions around the world.
+
+                        </h5>
+                        <a  role="button" type="button" class="btn btn-dark " data-toggle="dropdown" href="#">
+                            Learn more
+                          </a>
+                      </div>
+                  </div>
+
+                  <div class="dropdown">
+                    <a  role="button" type="button" class="catt srcn" data-toggle="dropdown" href="#">
+                        <i class="fas fa-search"></i>
+                    
+                    </a>
+                    <div class="dropdown-menu cartDesc" aria-labelledby="navbarDropdownMenuLink">
+                        <p class="text-muted">Your cart is empty.</p>
+                        <p>Keep shopping</p>
+                    </div>
+                 </div>
+                  <div class="dropdown">
+                    <a  role="button" type="button" class="catt" data-toggle="dropdown" href="#">
+                        <i class="fas fa-shopping-cart"></i>
+                    
+                    </a>
+                    <div class="dropdown-menu cartDesc" aria-labelledby="navbarDropdownMenuLink">
+                        <p class="text-muted">Your cart is empty.</p>
+                        <p>Keep shopping</p>
+                    </div>
+                </div>
+                
+
+                 
+                <div class="dropdown">
+             
+        
+                     <a  role="button" type="button" class="btn btn-outline-dark scrr" data-toggle="dropdown" href="#">
+                    Login
+                    
+                    </a> 
+                </div> 
+
+                <div class=" dropdown">
+                    <a  role="button" type="button" class="btn btn-dark  scrr" data-toggle="dropdown" href="#">
+                    Sign up
+                    </a>
+                    
+                </div> 
+
+                 <div class="dropdown">
+                    <a  role="button" type="button" class="btn btn-outline-dark linkbtn scrr" data-toggle="dropdown" href="#">
+                        <i class="fas fa-globe"></i>
+                        
+                    </a>
+                    
+                </div> 
+
+
+            </div>
+        </div>
+    </header>
+
+    <main class="login">
+        <div class="title">
+            Log In to Your Udemy Account!
+        </div>
+
+        <div id="loginIduser"class="loginform">
+            <form action="" method="GET">
+                <button class="logbtn">
+                    <i class="fab fa-facebook-f"></i> Continue with Facebook  
+                </button>
+                <br>
+                <button>
+                    <i class="fab fa-google"></i> Continue with Google
+                </button>
+                <br>
+                <button>
+                    <i class="fab fa-apple"></i> Continue with Apple
+                </button>
+                <br>
+                <div class="emailField">
+                    <label for="email"> <i class="fas fa-envelope"></i></label>
+                    <input type="email" id="email" placeholder="Email">
+                </div>
+                <div class="emailField">
+                    <label for="password"> <i class="fas fa-lock"></i></label>
+                    <input type="password" id="password" placeholder="Password">
+                </div>
+                <input type="submit" class="submit" value="Log In" onclick="login()">
+                <p>or <a href="#" class="setting1">Forgot Password</a></p>
+                <p>Don't have an account? <a href="#" class="setting2">Sign up</a></p>
+                <a href="#" class="setting2">Log in with your organization</a>
+            </form>
+        </div>
+    </main>
+
+
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-10  col-md-9 col-sm-12">
+                        <div class="row">
+                            <div class="col-lg-3  col-md-3 col-sm-12">
+                                <a href="#!">Udemy Business</a>
+                                <a href="#!">Teach on Udemy</a>
+                                <a href="#!">Get the app</a>
+                                <a href="#!">About us</a>
+                                <a href="#!">Contact us</a>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-12">
+                                <a href="#!">Careera</a>
+                                <a href="#!">Blog</a>
+                                <a href="#!">Help and Support</a>
+                                <a href="#!">Affiliate</a>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <a href="#!">Terms</a>
+                                <a href="#!">Privacy policy</a>
+                                <a href="#!">Do not sell my personal information</a>
+                                <a href="#!">Sitemap</a>
+                            </div>
+                        </div>
+                </div>
+
+                <div class="col-lg-2 col-md-3 col-sm-12 rightfooter">
+                   <div class="bb">
+                        <button><img src="images/1486395887-globe_80613.png" alt="">English</button>
+                   </div>
+                </div>
+            </div>
+
+            <div class="row lastfooter">
+                <div class="col-lg-10 col-md-10 col-sm-12">
+                    <a href="#"><img src="images/logo-udemy-inverted.svg" width="90px" alt=""></a>
+                </div>
+
+                <div class="col-lg-2 col-md-2 col-sm-12 rightfooter">
+                    <p>© 2021 Udemy, Inc.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/jquery-3.5.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+      <!-- Swiper JS -->
+      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+      <!-- Initialize Swiper -->
+      <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyDEc8n4f65I75wpi6vFEllsnujO4juw17g",
+          authDomain: "udemy-8e7b7.firebaseapp.com",
+          projectId: "udemy-8e7b7",
+          storageBucket: "udemy-8e7b7.appspot.com",
+          messagingSenderId: "934732034480",
+          appId: "1:934732034480:web:0df6bd923b168f2b90a675",
+          measurementId: "G-EQ6ECHKDX5"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script>
+      
+    <script src="login.js"></script>
+   
+</body>
+</html>

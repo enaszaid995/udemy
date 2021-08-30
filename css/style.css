@@ -364,7 +364,13 @@ section{
       padding:30px;
       border-radius: 50%;
   }
-
+  .swiper-slide a{
+      color: black;
+      text-decoration: none;
+  }
+  .swiper-slide a:hover{
+      color: blueviolet;
+  }
   @media only screen and (min-width: 769px) {
     .swiper-slide:first-child {
       transition: transform 100ms;
@@ -594,6 +600,110 @@ footer a{
 }
 footer a:hover{
     color: white;
+}
+
+ /* Login Page  */
+
+ .login{
+    text-align: center;
+    /* padding: 0px 90px ; */
+    box-shadow: 0px -4px 3px rgb(224, 222, 222);
+ }
+ .login .title{
+     padding: 40px;
+    font-weight: 700;
+    width: 25%;
+    text-align: center;
+     border-bottom: 1px solid black;
+     margin: auto;
+ }
+ .login form{
+    width: 25%;
+    text-align: center;
+    margin: auto;
+    padding:20px ;
+ }
+ .login button{
+     width: 80%;
+     margin: 5px;
+     padding: 10px;
+     text-align: left;
+     font-weight: 700;
+     border: rgb(148, 147, 147);
+     outline: none;
+ }
+ .login button:hover{
+     opacity: 0.9;
+ }
+ .login  i{
+     font-size: 20px;
+     padding-right: 15px;
+ }
+ .login form .logbtn{
+     background-color: #164675;
+     color: white;
+ }
+
+ .login form div{
+    width: 80%;
+    margin: auto;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid gray;
+    outline: none;
+    margin-bottom: 10px;
+}
+
+.login form div input{
+    border: none;
+}
+.login form div input:focus{
+    border: none;
+    outline: none;
+}
+.login form .submit{
+    background-color: #8c38c0;
+    color: white;
+    width: 80%;
+    margin: 5px;
+    padding: 10px;
+    font-weight: 700;
+    border: rgb(148, 147, 147);
+    outline: none;
+}
+.login form .setting1{
+    color: #8c38c0;
+}
+.login form .setting1:hover{
+    color: #7524a7;
+    text-decoration: none;
+}
+
+.login form .setting2{
+    color: #8c38c0;
+    font-weight: 700;
+}
+.login form .setting2:hover{
+    color: #7524a7;
+    text-decoration: none;
+}
+.login form .submit:hover{
+    opacity: 0.9;
+}
+
+
+/* Cart PAge */
+.headCart{
+    margin:0;
+    padding: 0;
+}
+.headCart h1{
+    /* margin-left: 150px; */
+    font-weight: 700;
+    padding: 50px 150px;
+    color: white;
+    background-color: #1c1d1f;
+    
 }
 @media screen and (max-width: 1100px) {
     header .centerNav form{

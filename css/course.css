@@ -1,0 +1,421 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+/*============================ end navbar =========================================*/
+.sideNAv{
+    margin: 0;
+    padding: 0;
+    width: 30%;
+    position: relative;
+    z-index: 1000;
+    visibility: hidden;
+    
+}
+.sideNAv .links{
+    position: absolute;
+    margin: 0;
+    height: 100vh;
+    background-color: white;
+    padding: 20px 100px 20px 50px ;
+    
+}
+.sideNAv .links a{
+    display: block;
+    padding: 5px;
+}
+.sideNAv .cancel{
+    position: absolute;
+    top: 20px;
+    left: 120px;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin-left: 100px;
+    font-size: 25px;
+}
+header{/*
+    box-shadow: 0px 10px 5px rgb(224, 222, 222); */
+    padding: 0px 5px;
+    font-size: 12px;
+    margin-top: 0;
+}
+header .leftNav{
+    width: 12%;
+    text-align: left;
+}
+ 
+
+header .dropdown-menu::before{
+    
+    border: none;
+    content: none;
+}
+
+header .dropdown-menu::after {
+border: none;
+content: none;
+}
+
+header .dropdown .dropdown-menu{
+    padding: 10px;
+}
+header .dropdown .dropdown-menu a{
+    padding-bottom: 5px;
+}
+header .dropdown:hover .dropdown-menu {
+    display: block;
+   
+}
+
+header .dropdown:hover .menusearch  {
+    display: none;
+}
+
+header .centerNav{
+    width: 35%;
+    text-align: center;
+}
+
+
+header .rightNav{
+    width: 45%;
+    text-align: right;
+    padding: 0;
+    margin: 0;
+    margin: right;
+    margin-right: 0;
+}
+
+header .rightNav .btn{
+    margin: 20px 0px 0px 10px;
+    font-size: 12px;
+}
+
+header  .dropdown .catt{
+    font-size: 15px;
+    color: black;
+    padding-top: 25px;
+    margin-right: 10px;
+    margin-left: 15px;
+}
+header .dropdown .catt:hover{
+    color: blueviolet;
+}
+
+header  .dropdown .cat{
+    font-size: 15px;
+    min-width: 135px;
+    margin-left: 0px;
+    padding-top: 25px;
+    color: black;
+    text-decoration:none;
+    
+}
+header .dropdown .cat:hover{
+    color: blueviolet;
+}
+
+header form{
+    width: 100%;
+    margin: auto;
+    margin-top: 15px;
+}
+
+header .listitemnav{
+    margin: 0;
+    padding-right: 0;
+    margin-right: 200;
+    border: none;
+}
+header .listitemnav .btn:focus{
+    box-shadow: none;
+}
+header .listitemnav .dropdown-menu{
+    margin: 0;
+    top: 0;
+}
+#myInput {
+    background-image: url('/images/icons8-search-24.png');
+    background-position: 25px 10px;
+    background-repeat: no-repeat;
+    width: 90%;
+    font-size: 16px;
+    Padding: 12px 60px;
+    border: 1px solid black;
+    border-radius: 25px;   
+    margin-bottom: 12px;
+  }
+  #myInput2 {
+    background-image: url('/images/icons8-search-24.png');
+    background-position: 300px 10px;
+    background-repeat: no-repeat;
+    font-size: 16px;
+    Padding: 12px 10px;
+    border: 1px solid black;
+    margin-bottom: 12px;
+  }
+  #myInput:focus{
+    border: 1px solid black;
+      outline: none;  
+  }
+  #myUL {
+    list-style-type: none;
+   padding: 5px 10px;
+    display: none;
+  }
+  #myUL a{
+      text-decoration: none;
+      min-width: 400px;
+      color: black;
+  }
+  header .leftNav .srcn{
+      padding-right: 200px;
+     font-size: 20px;
+     padding-bottom: 10px;
+    display: none;
+}
+header .rightNav .srcn{
+    display: none;
+}
+header .rightNav i{
+    font-size: 20px;
+}
+header .cartDesc{
+    width: 250px;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+   font-weight: 600;
+}
+header .techDesc{
+    width: 350px;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+   font-weight: 600;
+}
+header .techDesc a{
+    width: 100%;
+}
+header .cartDesc p{
+    color: blueviolet;
+    
+}
+/*============================ end navbar =================================================*/
+/*============================ start header navbar =========================================*/
+.navhead{
+    width: 100%;
+}
+.breadcrumb{
+    display: flex;
+    background-color: black;
+    border: 1px solid black;
+}
+#dev{
+    text-transform: capitalize;
+    text-decoration: none;
+    color: #7971ea; 
+}
+.section{
+    background-color: black;
+}
+.comp{
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+}
+.creat{
+    color:white;
+}
+.jose{
+    color: #7971ea;
+    text-decoration: #7971ea;
+    font-size: 14px;
+    
+}
+.jose:hover{
+    color:#7971ea;
+}
+.com{
+    color:white;
+    margin-right: 5px;
+}
+.wis{
+    border: 1px solid #7971ea;
+    text-transform: capitalize;
+    font-weight: 400;
+}
+.wis:hover{
+    scale: 1;
+    transition: 1s ease;
+    color: #7971ea;
+}
+.gi{
+    border: 1px solid #7971ea;
+    text-transform: capitalize;
+    font-weight: 400;
+}
+.gi:hover{
+    scale: 1;
+    transition: 1s ease;
+    color: #7971ea;
+}
+.impython{
+height: 300px;
+width: 420px;
+align-items: center;
+justify-content: center;
+}
+
+/*============================ end header navbar ===========================================*/
+/*============================ star card cart ==============================================*/
+.text{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: justify;
+    word-spacing: 4px;
+    
+}
+.card1{
+    width: 65%;
+    border: 1px solid gray;
+}
+.npr{
+    font-size: 30px;
+    font-weight: 700;   
+}
+.opr{
+    font-size: 20px;
+    font-weight: 300;
+}
+.dpr{
+    font-size: 20px;
+}
+.ic,
+.alarm{
+    color: #b32d0f;
+}
+.hour{
+    font-size: 18px;
+    font-weight: 400;
+}
+/*============================ end card cart ==============================================*/
+
+/*============================ start share button ===========================================*/
+.share-options{
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    width: auto;
+    height: auto;
+    transform-origin: bottom left;
+    transform: scale(0);
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background: rgba(15, 15, 15, 0.5);
+    color: #fff;
+    padding: 20px;
+    font-family: 'roboto';
+    transition: .5s;
+    transition-delay: .5s;;
+}
+.share-options.active{
+    transform: scale(1);
+    transition-delay: 0s;
+}
+.title{
+    opacity: 0;
+    transition: .5s;
+    transition-delay: 0s;
+    font-size: 20px;
+    text-transform: capitalize;
+    border-bottom: 1px solid #fff;
+    width: fit-content;
+    padding: 0 20px 3px 0;
+}
+.social-media{
+    opacity: 0;
+    transition: .5s;
+    transition-delay: 0s;
+    width: 250px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
+.social-media-btn{
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #000;
+    color: #fff;
+    line-height: 50px;
+    font-size: 25px;
+    cursor: pointer;
+    margin: 0 5px;
+    text-align: center;
+}
+
+.social-media-btn:nth-child(1){
+    background: #FFA654;
+}
+.social-media-btn:nth-child(2){
+    background: #25D366;
+}
+.social-media-btn:nth-child(3){
+    background: #E4405F;
+}
+.social-media-btn:nth-child(4){
+    background: #1DA1F2;
+}
+.social-media-btn:nth-child(5){
+    background: #1877F2;
+}
+.social-media-btn:nth-child(6){
+    background: #0A66C2;
+}
+.link-container{
+    opacity: 0;
+    transition: .5s;
+    transition-delay: 0s;
+    width: 100%;
+    position: relative;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    border-radius: 40px;
+    background-color: #fff;
+    overflow: hidden;
+    padding: 0 10px;
+}
+.link{
+    width: 80%;
+    height: 100%;
+    line-height: 40px;
+    color: #000;
+}
+.copy-btn{
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+    background: #000;
+    color: #fff;
+    border: none;
+    height: 100%;
+    width: 30%;
+    text-transform: capitalize;
+    font-size: 16px;
+}
+.share-options.active .title,
+.share-options.active .social-media,
+.share-options.active .link-container{
+    opacity: 1;
+    transition: .5s;
+    transition-delay: .5s;
+}
+/*============================ end share button ===========================================*/

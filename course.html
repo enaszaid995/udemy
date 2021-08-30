@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/duotone.css" integrity="sha384-R3QzTxyukP03CMqKFe0ssp5wUvBPEyy9ZspCB+Y01fEjhMwcXixTyeot+S40+AjZ" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/fontawesome.css" integrity="sha384-eHoocPgXsiuZh+Yy6+7DsKAerLXyJmu2Hadh4QYyt+8v86geixVYwFqUvMU8X90l" crossorigin="anonymous"/>
+    <link rel="icon" href="images/logo-udemy.svg">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/course.css">
+    <body>
+    <!--============================ start navbar =========================================-->
+    <div class="sideNAv d-flex justify-content-between" id="sidenav">
+    <div class="links">
+        <a>home</a>
+        <a>log in</a>
+        <a>signup</a>
+    </div>
+    <div class="cancel" id="cancel" onclick="hideSide()">
+        <i class="far fa-window-close"></i>
+    </div>
+    </div>
+    <header class="brightness">
+    <div class="container-fluid justify-content-between d-flex ">
+    <div class="leftNav  d-flex">
+    <div class=" dropdown listitemnav " id="trash">
+    <a  role="button" type="button" class="btn catt srcn tablink "   onclick="showSide()" data-toggle="dropdown" href="#">
+    <i class="fas fa-bars"></i></a>
+    </div>
+    <a class="navbar-brand me-2 mb-1 d-flex align-items-center imgna" href="#">
+    <img
+        src="images/logo-udemy.svg"
+        height="35"
+        alt=""
+        loading="lazy"
+        style="margin-top: 2px;"/>
+    </a>
+    <div class=" dropdown">
+    <a  role="button" type="button" class="btn catt scrr" data-toggle="dropdown" href="#">
+    Categories</a>
+    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+    </div>
+    </div>
+    </div>
+    <div class="centerNav justify-content-between d-flex align-items-center dropdown">
+    <form class="example scrr brightness" action="/action_page.php" >
+    <input type="text" id="myInput" onkeyup="mySearch()" placeholder="Search for anything" title="Type in a name">
+    </form>
+    <div class="dropdown-menu menusearch"  id="menusearch" aria-labelledby="navbarDropdownMenuLink">
+    <ul id="myUL">
+    <li><a href="#">Adele</a></li>
+    <li><a href="#">Agnes</a></li>
+    <li><a href="#">Billy</a></li>
+    <li><a href="#">Bob</a></li>
+    <li><a href="#">Calvin</a></li>
+    <li><a href="#">Christina</a></li>
+    <li><a href="#">Cindy</a></li>
+    </ul>
+    </div>
+    </div>
+    <div class="rightNav d-flex">
+    <div class=" dropdown">
+    <a  role="button" type="button" class="cat udemyBus" data-toggle="dropdown" href="#">
+    Udemy Business
+    </a>
+    <div class="dropdown-menu techDesc" aria-labelledby="navbarDropdownMenuLink">
+    <h5>
+    Get your team access to over 6,000 top Udemy courses, anytime, anywhere.
+    </h5>
+    <a  role="button" type="button" class="btn btn-dark " data-toggle="dropdown" href="#">
+    Try Udemy Business
+    </a>
+    </div>
+    </div>
+    <div class="dropdown">
+    <a  role="button" type="button" class="cat udemyteach" data-toggle="dropdown" href="#">
+    Teach on Udemy
+    </a>
+    <div class="dropdown-menu techDesc" aria-labelledby="navbarDropdownMenuLink">
+    <h5>
+    Turn what you know into an opportunity and reach millions around the world.
+    </h5>
+    <a  role="button" type="button" class="btn btn-dark " data-toggle="dropdown" href="#">
+    Learn more
+    </a>
+    </div>
+    </div>
+    <div class="dropdown">
+    <a  role="button" type="button" class="catt srcn" data-toggle="dropdown" href="#">
+    <i class="fas fa-search"></i>
+    </a>
+    <div class="dropdown-menu cartDesc" aria-labelledby="navbarDropdownMenuLink">
+    <p class="text-muted">Your cart is empty.</p>
+    <p>Keep shopping</p>
+    </div>
+    </div>
+    <div class="dropdown">
+    <a  role="button" type="button" class="catt" data-toggle="dropdown" href="#">
+    <i class="fas fa-shopping-cart"></i>
+    </a>
+    <div class="dropdown-menu cartDesc" aria-labelledby="navbarDropdownMenuLink">
+    <p class="text-muted">Your cart is empty.</p>
+    <p>Keep shopping</p>
+    </div>
+    </div>
+    <div class="dropdown">
+    <a  role="button" type="button" class="btn btn-outline-dark scrr" data-toggle="dropdown" href="#">
+    Login
+    </a> 
+    </div> 
+    <div class=" dropdown">
+    <a  role="button" type="button" class="btn btn-dark  scrr" data-toggle="dropdown" href="#">
+    Sign up
+    </a>
+    </div> 
+    <div class="dropdown">
+    <a  role="button" type="button" class="btn btn-outline-dark linkbtn scrr" data-toggle="dropdown" href="#">
+    <i class="fas fa-globe"></i>
+    </a>
+    </div> 
+    </div>
+    </div>
+    <!--============================ end navbar ==================================================-->
+    <!--============================ start header navbar =========================================--> 
+    <div class="section card mb-3" style="max-width: 100%;">
+    <div class="container">
+    <div class="navhead">
+    <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="index.html" id="dev">development</a></li>
+    <li class="breadcrumb-item"><a href="index.html" id="dev">programming Languages</a></li>
+    <li class="breadcrumb-item active" aria-current="page" id="dev">python</li>
+    </ol>
+    </nav>
+    </div>
+    <div class="row no-gutters">
+    <div class="col-md-8">
+    <div class="card-body">
+    <h5 class="comp card-title" id="titleCourse"></h5>
+    <p class="comp card-text" id="authCourse">Learn Python like a Professional Start from the basics and go all the way to creating your own applications and games</p>
+    <p class="creat">Created by  <a href="#" class="jose"><span>jose portila</span></a></p>
+    <span class="com card-text"><i class="far fa-cog"></i> Last updated 1/8/2021</span>
+    <span class="com card-text"><i class="fal fa-globe"></i> English</span>
+    <span class="com card-text"><i class="far fa-closed-captioning"></i> English [Auto], French [Auto]</span>
+    <br>
+    <br>
+    <br>
+    <button type="button" class="gi btn btn-dark">wishlist <i class="fal fa-heart"></i></button>
+    <!--============================ end header navbar ==============================================================-->
+    <!--====================================== start share button ====================================================  -->
+    <button type="button" class="wis btn btn-dark">share <i class="fa fa-share" aria-hidden="true"></i></button>
+    <div class="share-options">
+        <p class="title">share</p>
+    <div class="social-media">
+        <button class="social-media-btn" onclick="open()"><i class="far fa-folder-open"></i></button>
+        <button class="social-media-btn"><i class="fab fa-whatsapp"></i></button>
+        <button class="social-media-btn"><i class="fab fa-instagram"></i></button>
+        <button class="social-media-btn"><i class="fab fa-twitter"></i></button>
+        <button class="social-media-btn"><i class="fab fa-facebook-f"></i></button>
+        <button class="social-media-btn"><i class="fab fa-linkedin-in"></i></button>
+    </div>
+    <div class="link-container">
+        <p class="link">https://www.udemy.com/course/complete-python-bootcamp/</p>
+        <button class="copy-btn">copy</button>
+    </div>
+    </div>
+        <button type="button" class="gi btn btn-dark">gift this course</button>
+    </div>
+    </div>
+    <div class="col-md-4" id="courseImg">
+    <img src="images/img/p1.jpg" class="impython" alt="python" id="courseImg">
+    </div>
+</div>
+</div>
+</div>
+<!--========================================== end share button =====================================================-->
+<!--========================================== start section ========================================================-->
+<div class="container">
+<div class="row">   
+<div class="card1">
+<div class="card-body">
+    <h5 class="card-title">What you'll learn</h5>
+    <br>
+<div class="text">
+<div class="prag">   
+    <p class="card-text">
+    <i class="fal fa-check"></i>
+    Learn to use Python professionally, learning<br> both Python 2 and Python 3!</p>
+    <p class="card-text"><i class="fal fa-check"></i> 
+        Learn advanced Python features, like the<br>collections module and how to work<br>with timestamps!</p>
+    <p class="card-text"><i class="fal fa-check"></i> 
+        Understand complex topics, like decorators.</p>
+    <p class="card-text"><i class="fal fa-check"></i> 
+        Get an understanding of how to create GUIs<br>in the Jupyter Notebook system!</p>
+</div>
+<div class="car">
+    <p class="card-text">
+    <i class="fal fa-check"></i>
+    Create games with Python, like Tic Tac Toe<br>
+    and Blackjack!</p>
+    <p class="card-text"><i class="fal fa-check"></i> 
+    Learn to use Object Oriented Programming<br>with classes!</p>
+    <p class="card-text"><i class="fal fa-check"></i> 
+        Understand how to use both the Jupyter<br>Notebook and create .py files</p>
+    <p class="card-text"><i class="fal fa-check"></i> 
+        Build a complete understanding of Python<br>from the ground up!</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!--========================================== end section ========================================================-->
+
+    
+    
+    
+    
+
+    <!--============================ link script ====================================-->
+    <script src="js/jquery-3.5.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <script defer src="https://pro.fontawesome.com/releases/v5.10.0/js/all.js" integrity="sha384-G/ZR3ntz68JZrH4pfPJyRbjW+c0+ojii5f+GYiYwldYU69A+Ejat6yIfLSxljXxD" crossorigin="anonymous"></script>
+    <script defer src="https://pro.fontawesome.com/releases/v5.10.0/js/duotone.js" integrity="sha384-PcDzzpTJzDDda2YUM4EY5ZqnZQ3DTIFtoaAn7t07N0UIY1HVyaxIHRzROmFBd48z" crossorigin="anonymous"></script>
+    <script defer src="https://pro.fontawesome.com/releases/v5.10.0/js/fontawesome.js" integrity="sha384-8YSeMunSTZdDZy7rZxfG3NqC3KnYaCKxTJMm9yoILgIoMpXeTKDrV8TeV9C5ItEc" crossorigin="anonymous"></script>
+    </body>

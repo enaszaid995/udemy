@@ -78,10 +78,7 @@ const links =[
       var coursePAr = document.getElementById("detailC2");
       var courseSpan = document.getElementById("detailC3");
       var cimg = document.getElementById("ima");
-    //   var chead = document.getElementsByClassName("chead");
-    //   var cauther = document.getElementByClassName("cauther");
-    //   var crange = document.getElementByClassName("crange");
-    //   var cprice = document.getElementByClassName("cprice");
+      
       var swiperr = new Swiper(".mySwiper", {
         slidesPerView: 1,
         centeredSlides: false,
@@ -109,8 +106,14 @@ const links =[
         },
       });    
 
-var pl = document.getElementById("python");
-pl.addEventListener("click",function python(){
+      document.getElementById("login").addEventListener('click' , function(e){
+          document.location = 'login.html';
+      })
+
+     document.getElementById("mainswiper").innerHTML =python();
+   
+function python(){
+   
     for(var i = 0 ; i <links.length ; i++){
         if(links[i].spann== "python"){
             courseHead.innerHTML = links[i].head;
@@ -120,10 +123,10 @@ pl.addEventListener("click",function python(){
       }
       getPythonCourse("data.json");
       // getCourse("http://fakeapi.jsonparseronline.com/posts");
-  });
+  }
         
 
-   
+  
     function getPythonCourse(url){
         fetch(url)
          .then(response => response.json())
@@ -150,13 +153,14 @@ pl.addEventListener("click",function python(){
     }
     function showCourse(img,title,auther,price,range){
         var swipjer = document.getElementById("mainswiper");
+       
         var tsl = title.slice(0,20)+"...";
-        // var swipjer = document.getElementById("coursei");
+        ;
         const courseEl = document.createElement("div");
         courseEl.classList.add("swiper-slide");
-        
+        courseEl.classList.add("python");
         courseEl.innerHTML = `<img src = ${img} >
-                                <h5>${tsl}</h5> 
+                                <h5><a href="course.html" onclick="singleData(${img},${tsl},${auther})>${tsl} </a></h5> 
                                 <p class="text-muted">${auther}</p>
                                 <div class="star>
                                 <span class="fa fa-star checked"></span>
@@ -167,13 +171,30 @@ pl.addEventListener("click",function python(){
                                 </div>
                                 <strong>${price}</strong>
         `;
-                    
-                       swipjer.appendChild(courseEl);
+        function removeAllChildNodes(parent) {
+            while (parent.firstChild) {
+                parent.removeChild(parent.firstChild);
+                parent.remove();
+            }
+        }
+        const container = document.querySelectorAll('.excel');
+        for (const i in container) {
+            removeAllChildNodes(container[i]);
+        }
+
+        const containerr = document.querySelectorAll('.web');
+    for (const i in containerr) {
+        removeAllChildNodes(containerr[i]);
+    }
+        
+                    swipjer.insertBefore(courseEl, swipjer.firstChild);
+                   
         }
      
-        var el = document.getElementById("excel");  
-        el.addEventListener("click", 
+        // document.getElementById('excel').addEventListener("click",excel());
         function excel(){
+           
+    
             for(var i = 0 ; i <links.length ; i++){
                 if(links[i].spann== "Excel"){
                     courseHead.innerHTML = links[i].head;
@@ -181,19 +202,21 @@ pl.addEventListener("click",function python(){
                     courseSpan.innerHTML = " "+links[i].spann;
                 }
             }
-        
+            
             getExcelCourse("data.json");
         
-        })
+        }
  
 
 function getExcelCourse(url){
+    // var ii =  document.getElementById("mainswiper");
+    // var iii = document.getElementsByClassName('swiper-slide');
+   
     fetch(url)
      .then(response => response.json())
      .then(data => {
          data.forEach(item => {
-            // var t = JSON.stringify(item.title);
-            // var i = JSON.stringify(item.imageUrl);
+          
            
             if(item.type == "excel"){
                 var i = JSON.stringify(item.image);
@@ -203,7 +226,9 @@ function getExcelCourse(url){
                 var r = JSON.stringify(item.range);
                
                 console.log(i,t,a,p,r);
+             
                 showExcelCourse(i,t,a,p,r);
+
                
             }
             
@@ -215,12 +240,14 @@ function getExcelCourse(url){
 }
 
 function showExcelCourse(img,title,auther,price,range){
+
     var swipjer = document.getElementById("mainswiper");
+    
     var tsl = title.slice(0,20)+"...";
     // var swipjer = document.getElementById("coursei");
     const courseEl = document.createElement("div");
     courseEl.classList.add("swiper-slide");
-    
+    courseEl.classList.add("excel");
     courseEl.innerHTML = `<img src = ${img} >
                             <h5>${tsl}</h5> 
                             <p class="text-muted">${auther}</p>
@@ -233,8 +260,24 @@ function showExcelCourse(img,title,auther,price,range){
                             </div>
                             <strong>${price}</strong>
     `;
+    function removeAllChildNodes(parent) {
+        while (parent.firstChild) {
+            parent.removeChild(parent.firstChild);
+            parent.remove();
+        }
+    }
+    const container = document.querySelectorAll('.python');
+    for (const i in container) {
+        removeAllChildNodes(container[i]);
+    }
+
+    const containerr = document.querySelectorAll('.web');
+    for (const i in containerr) {
+        removeAllChildNodes(containerr[i]);
+    }
+                    swipjer.appendChild(courseEl);
                 
-                   swipjer.appendChild(courseEl);
+    
     }
 $('.broadlinks a').click( function(){
     if ( $(this).hasClass('active') ) {
@@ -252,7 +295,80 @@ $('.broadlinks a').click( function(){
                 coursePAr.innerHTML = links[i].pargraph;
                 courseSpan.innerHTML = " "+links[i].spann;
             }}
+
+            getWebCourse("data.json");
         }
+
+
+    
+function getWebCourse(url){
+    
+    fetch(url)
+     .then(response => response.json())
+     .then(data => {
+         data.forEach(item => {
+          
+           
+            if(item.type == "web development"){
+                var i = JSON.stringify(item.image);
+                var t = JSON.stringify(item.title);
+                var a = JSON.stringify(item.auther);
+                var p = JSON.stringify(item.price);
+                var r = JSON.stringify(item.range);
+               
+                console.log(i,t,a,p,r);
+             
+                showWebCourse(i,t,a,p,r);
+
+               
+            }
+            
+
+         });
+        
+         
+     });
+}
+
+function showWebCourse(img,title,auther,price,range){
+
+    var swipjer = document.getElementById("mainswiper");
+    
+    var tsl = title.slice(0,20)+"...";
+    // var swipjer = document.getElementById("coursei");
+    const courseEl = document.createElement("div");
+    courseEl.classList.add("swiper-slide");
+    courseEl.classList.add("web");
+    courseEl.innerHTML = `<img src = ${img} >
+                            <h5>${tsl}</h5> 
+                            <p class="text-muted">${auther}</p>
+                            <div class="star>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            </div>
+                            <strong>${price}</strong>
+    `;
+    function removeAllChildNodes(parent) {
+        while (parent.firstChild) {
+            parent.removeChild(parent.firstChild);
+            parent.remove();
+        }
+    }
+    const container = document.querySelectorAll('.python');
+    for (const i in container) {
+        removeAllChildNodes(container[i]);
+    }
+    const containerr = document.querySelectorAll('.excel');
+    for (const i in containerr) {
+        removeAllChildNodes(containerr[i]);
+    }
+                    swipjer.appendChild(courseEl);
+              
+    
+    }
   
         var swiper = new Swiper(".mySwiper", {
             slidesPerView: 1,
@@ -281,41 +397,4 @@ $('.broadlinks a').click( function(){
             },
           });
 
-        //   {
-        //     "python": [
-        //                 {"image":"./images/img/p1.jpg", "title":"Microsoft Excell - qExcel from Beginner to Advanced", "auther":"Jose Portilla", "price":"$23.99", "range":"$4"},
-        //                 {"image":"images/img/p2.jpg", "title":"Microsoft Excel - wExcel from Beginner to Advanced", "auther":"Jose Portilla", "price":"$23.99", "range":"$4"},
-        //                 {"image":"images/img/p3.jpg", "title":"Microsoft Excel - dExcel from Beginner to Advanced", "auther":"Jose Portilla", "price":"$23.99", "range":"$4"},
-        //                 {"image":"images/img/p4.jpg", "title":"Microsoft Excel - Excel from Beginner to Advanced", "auther":"Jose Portilla", "price":"$23.99", "range":"$4"},
-        //                 {"image":"images/img/p5.jpg", "title":"Microsoft Excel - Excel from Beginner to Advanced", "auther":"Jose Portilla", "price":"$23.99", "range":"$4"},
-        //                 {"image":"images/img/p6.jpg", "title":"Microsoft Excel - Excel from Beginner to Advanced", "auther":"Jose Portilla", "price":"$23.99", "range":"$4"},
-        //                 {"image":"images/img/p7.jpg", "title":"Microsoft Excel - Excel from Beginner to Advanced", "auther":"Jose Portilla", "price":"$23.99", "range":"$4"},
-        //                 {"image":"images/img/p8.jpg", "title":"Microsoft Excel - Excel from Beginner to Advanced", "auther":"Jose Portilla", "price":"$23.99", "range":"$4"},
-        //                 {"image":"images/img/p9.jpg", "title":"Microsoft Excel - Excel from Beginner to Advanced", "auther":"Jose Portilla", "price":"$23.99", "range":"$4"},
-        //                 {"image":"images/img/p10.jpg", "title":"Microsoft Excel - kExcel from Beginner to Advanced", "auther":"Jose Portilla", "price":"$23.99", "range":"$4"}
-        //     ],
-        //     "excel":[
-                    //     {"image":"images/img/e1.jpg", "title":"Microsoft Excel - sExcel from Beginner to Advanced", "auther":"Jose Portilla", "price":"$23.99", "range":"$4"},
-                    //     {"image":"images/img/e2.jpg", "title":"Microsoft Excel - sExcel from Beginner to Advanced", "auther":"Jose Portilla", "price":"$23.99", "range":"$4"},
-                    //     {"image":"images/img/e3.jpg", "title":"Microsoft Excel - Excel from Beginner to Advanced", "auther":"Jose Portilla", "price":"$23.99", "range":"$4"},
-                    //     {"image":"images/img/e4.jpg", "title":"Microsoft Excel - Excel from Beginner to Advanced", "auther":"Jose Portilla", "price":"$23.99", "range":"$4"},
-                    //     {"image":"images/img/e5.jpg", "title":"Microsoft Excel - Excel from Beginner to Advanced", "auther":"Jose Portilla", "price":"$23.99", "range":"$4"},
-                    //     {"image":"images/img/e6.jpg", "title":"Microsoft Excel - Excel from Beginner to Advanced", "auther":"Jose Portilla", "price":"$23.99", "range":"$4"},
-                    //     {"image":"images/img/e7.jpg", "title":"Microsoft Excel - Excel from Beginner to Advanced", "auther":"Jose Portilla", "price":"$23.99", "range":"$4"},
-                    //     {"image":"images/img/e8.jpg", "title":"Microsoft Excel - Excel from Beginner to Advanced", "auther":"Jose Portilla", "price":"$23.99", "range":"$4"},
-                    //     {"image":"images/img/e9.jpg", "title":"Microsoft Excel - Excel from Beginner to Advanced", "auther":"Jose Portilla", "price":"$23.99", "range":"$4"},
-                    //     {"image":"images/img/e10.jpg","title":"Microsoft Excel - Excel from Beginner to Advanced", "auther":"Jose Portilla", "price":"$23.99", "range":"$4"}
-                    // ],
-        //             "web development":[
-                            //     {"image":"images/img/w1.jpg", "title":"Microsoft Excel - hExcel from Beginner to Advanced", "auther":"Jose Portilla", "price":"$23.99", "range":"$4"},
-                            //     {"image":"images/img/w2.jpg", "title":"Microsoft Excel - Excel from Beginner to Advanced", "auther":"Jose Portilla", "price":"$23.99", "range":"$4"},
-                            //     {"image":"images/img/w3.jpg", "title":"Microsoft Excel - Excel from Beginner to Advanced", "auther":"Jose Portilla", "price":"$23.99", "range":"$4"},
-                            //     {"image":"images/img/w4.jpg", "title":"Microsoft Excel - Excel from Beginner to Advanced", "auther":"Jose Portilla", "price":"$23.99", "range":"$4"},
-                            //     {"image":"images/img/w5.jpg", "title":"Microsoft Excel - Excel from Beginner to Advanced", "auther":"Jose Portilla", "price":"$23.99", "range":"$4"},
-                            //     {"image":"images/img/w6.jpg", "title":"Microsoft Excel - Excel from Beginner to Advanced", "auther":"Jose Portilla", "price":"$23.99", "range":"$4"},
-                            //     {"image":"images/img/w7.jpg", "title":"Microsoft Excel - Excel from Beginner to Advanced", "auther":"Jose Portilla", "price":"$23.99", "range":"$4"},
-                            //     {"image":"images/img/w8.jpg", "title":"Microsoft Excel - Excel from Beginner to Advanced", "auther":"Jose Portilla", "price":"$23.99", "range":"$4"},
-                            //     {"image":"images/img/w9.jpg", "title":"Microsoft Excel - Excel from Beginner to Advanced", "auther":"Jose Portilla", "price":"$23.99", "range":"$4"},
-                            //     {"image":"images/img/w10.jpg", "title":"Microsoft Excel - kExcel from Beginner to Advanced", "auther":"Jose Portilla", "price":"$23.99", "range":"$4"}
-                            // ]
-        //   }
+    
